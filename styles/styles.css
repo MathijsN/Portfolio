@@ -1,0 +1,16 @@
+
+section {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+
+    p {
+        text-align: justify;
+        width: 11rem;
+
+        span {
+            color: var(--color-primary);
+        }
+    }
+}
+

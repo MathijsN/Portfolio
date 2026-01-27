@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter_18pt-Regular.ttf);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #F18126;
+    --color-background: #F0EFED;
+}
+
+body {
+    font-family: Inter, arial, sans-serif;
+    background-color: var(--color-background);
+}
