@@ -12,6 +12,25 @@
 :root {
     --color-primary: #F18126;
     --color-background: #F0EFED;
+    --color-text: #000;
+    --color-card-background: #D9D9D9;
+
+    --text-size-display: 11rem;
+    --text-size-xl: 5rem;
+    --text-size-l: 4rem;
+    --text-size-m: 2rem;
+    --text-size-s: 1rem;
+
+    --spacing-xl: 4rem;
+    --spacing-l: 3rem;
+    --spacing-m: 2rem;
+    --spacing-s: 2rem;
+    --spacing-xs: 1rem;
+
+    --border-radius-m: 1rem;
+    --border-radius-s: 0.5rem;
+    
+
 }
 
 body {
@@ -19,4 +38,13 @@ body {
     background-color: var(--color-background);
 
     interpolate-size: allow-keywords;
+
+    font-size: var(--text-size-s);
+
+}
+
+main {
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
