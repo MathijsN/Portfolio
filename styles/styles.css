@@ -4,9 +4,7 @@ section:nth-of-type(1) {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     place-content: center;
-    height: 110dvh;
-
-    /* overflow: hidden; */
+    height: 100dvh;
 
     p {
         place-self: center;
@@ -35,79 +33,38 @@ section:nth-of-type(1) {
     }
 }
 
-section.project-section {
-    margin-block: var(--spacing-xl);
-    grid-column: 1/-1;
+section.project-highlight {
+    margin-block: var(--spacing-l);
+    height: 150dvh;
+    position: relative;
 
-    ul {
-        display: flex;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        scroll-behavior: smooth;
+    article {
+        background-color: var(--color-card-background);
+        padding: var(--spacing-xxs);
+        border-radius: var(--border-radius-s);
+        height: 90vh;
+        overflow: hidden;
 
-        gap: var(--spacing-s);
-        padding-left: var(--spacing-l);
+        position: sticky;
+        bottom: var(--spacing-l);
 
-        li {
-            list-style: none;
-            background-color: var(--color-card-background);
-            overflow: hidden;
-            min-width: 80vw;
+        @media (width > 30rem) {
+            padding: var(--spacing-xs);
+        }
 
-            scroll-snap-align: center;
+        animation: --scroll linear;
+        animation-timeline: view(100vh 0);
 
-            padding: var(--spacing-s);
-            border-radius: var(--border-radius-m);
+        img {
+            width: 100%;
+            aspect-ratio: 2/1;
+            object-fit: cover;
+            object-position: 0% 0%;
 
-            a {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-
-                text-decoration: none;
-                color: var(--color-text);
-
-                h3 {
-                    font-size: var(--text-size-m);
-                    margin-bottom: var(--spacing-xs);
-
-                    grid-column: span 2;
-
-                    @media (width > 90rem) {
-                        grid-column: 1/2;
-                    }
-                }
-
-                p {
-                    max-width: 17rem;
-                    grid-column: span 2;
-                    
-                    @media (width > 90rem) {
-                        grid-column: 1/2;
-                        max-width: 45rem;
-                        
-                    }
-                }
-
-                img {
-                    aspect-ratio: 2/1;
-                    width: 40rem;
-                    object-fit: cover;
-                    object-position: 0% 0%;
-
-                    grid-column: 2/3;
-                    transform: translate(10%, 20%);
-
-                    border-radius: var(--border-radius-s);
-                }
-            }
-
+            border-radius: var(--border-radius-s);
         }
     }
-
 }
-
-
 
 
 
@@ -128,5 +85,15 @@ section.project-section {
 
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes --scroll {
+    0% {
+        scale: 0.2;
+    }
+
+    100% {
+        scale: 1;
     }
 }
