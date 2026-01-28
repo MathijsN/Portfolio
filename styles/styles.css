@@ -42,18 +42,39 @@ section.project-highlight {
         background-color: var(--color-card-background);
         padding: var(--spacing-xxs);
         border-radius: var(--border-radius-s);
-        height: 90vh;
-        overflow: hidden;
+
+        height: max-content;
 
         position: sticky;
         bottom: var(--spacing-l);
+
+        animation: --scroll linear;
+        animation-timeline: view();
+        animation-range-start: 0;
+        animation-range-end: 90vh;
 
         @media (width > 30rem) {
             padding: var(--spacing-xs);
         }
 
-        animation: --scroll linear;
-        animation-timeline: view(100vh 0);
+        @media (width > 1200px) {
+
+            height: 90vh;
+            overflow: hidden;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        a {
+
+            @media (width > 1200px) {
+
+                justify-self: end;
+                margin-block: 0;
+            }
+
+        }
 
         img {
             width: 100%;
@@ -62,6 +83,13 @@ section.project-highlight {
             object-position: 0% 0%;
 
             border-radius: var(--border-radius-s);
+
+
+            @media (width > 1200px) {
+
+                transform: translate(5%, 10%);
+                grid-column: span 3;
+            }
         }
     }
 }
