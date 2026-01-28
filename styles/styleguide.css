@@ -17,4 +17,6 @@
 body {
     font-family: Inter, arial, sans-serif;
     background-color: var(--color-background);
+
+    interpolate-size: allow-keywords;
 }
