@@ -43,14 +43,14 @@ section.project-highlight {
         }
     }
 
-    article + h2 {
+    article+h2 {
 
         margin-block: var(--spacing-xl);
         animation-range-start: 0dvh;
         animation-range-end: 40vh;
 
         @media (width > 788px) {
-            
+
             margin-block: var(--spacing-xxl);
         }
     }
@@ -126,6 +126,55 @@ section.project-highlight {
 
 section.more-projects {
     height: 100dvh;
+
+    display: flex;
+    overflow-x: auto;
+
+    &:hover {
+        ul {
+            animation-play-state: paused;
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: var(--spacing-m);
+
+        animation: --logo-movement 10s infinite linear;
+        animation-play-state: running;
+
+        padding-right: var(--spacing-xs);
+
+
+        li {
+            list-style: none;
+            flex: 0 0 5rem;
+
+            &:hover {
+                img {
+
+                    scale: 2;
+                }
+            }
+
+            img {
+                width: 10rem;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+        }
+    }
+
+}
+
+@keyframes --logo-movement {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 
