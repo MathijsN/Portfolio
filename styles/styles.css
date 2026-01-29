@@ -8,8 +8,8 @@ section:nth-of-type(1) {
 
     p {
         place-self: center;
-        text-align: justify;
         max-width: 11rem;
+        text-align: justify;
     }
 
     h1,
@@ -29,7 +29,6 @@ section:nth-of-type(1) {
 }
 
 section.project-highlight {
-    height: 150dvh;
 
     h2 {
         animation: --scroll-text linear;
@@ -38,9 +37,21 @@ section.project-highlight {
         animation-range-end: 80vh;
 
         @media (width > 1200px) {
-            
+
             animation-range-start: 0dvh;
             animation-range-end: 90vh;
+        }
+    }
+
+    article + h2 {
+
+        margin-block: var(--spacing-xl);
+        animation-range-start: 0dvh;
+        animation-range-end: 40vh;
+
+        @media (width > 788px) {
+            
+            margin-block: var(--spacing-xxl);
         }
     }
 
@@ -100,10 +111,10 @@ section.project-highlight {
 
         p {
             @media (width > 1200px) {
-            margin-block: 0;
+                margin-block: 0;
+            }
         }
-        }
-        
+
     }
 
     p {
@@ -111,6 +122,11 @@ section.project-highlight {
     }
 }
 
+
+
+section.more-projects {
+    height: 100dvh;
+}
 
 
 @keyframes --left-to-right {
@@ -157,6 +173,7 @@ section.project-highlight {
     0% {
         scale: 1;
     }
+
     100% {
         scale: 0;
     }

@@ -14,6 +14,7 @@
 :root {
     --color-primary: #F18126;
     --color-background: #F0EFED;
+    /* --color-background-secondary: #1E1E1E; */
     --color-text: #000;
     --color-button-bg: #FCE1C3;
     --color-card-background: #fff;
@@ -23,6 +24,7 @@
     --text-size-m: 2rem;
     --text-size-s: 1rem;
 
+    --spacing-xxl: 8rem;
     --spacing-xl: 4rem;
     --spacing-l: 3rem;
     --spacing-m: 2rem;
@@ -54,13 +56,12 @@ body {
         font-size: var(--text-size-m);
     }
 
-    h3 {
-    }
-
     p {
         max-width: 28rem;
         line-height: 1.4;
+    }
 
+    p, h2 {
         span {
             color: var(--color-primary);
         }
@@ -68,7 +69,7 @@ body {
 
 }
 
-main {
+section {
 
     margin-inline: var(--spacing-xxs);
 
