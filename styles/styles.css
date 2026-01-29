@@ -9,18 +9,12 @@ section:nth-of-type(1) {
     p {
         place-self: center;
         text-align: justify;
-        width: 11rem;
-
-        span {
-            color: var(--color-primary);
-        }
+        max-width: 11rem;
     }
 
     h1,
     h2 {
-        text-align: center;
-        font-size: clamp(var(--text-size-l), 22vw, var(--text-size-display));
-        text-transform: uppercase;
+        font-size: var(--text-size-display);
     }
 
     h1 {
@@ -30,13 +24,25 @@ section:nth-of-type(1) {
     h2 {
         animation: --right-to-left 1s ease forwards;
         align-self: end;
+        margin-block: 0;
     }
 }
 
 section.project-highlight {
-    margin-block: var(--spacing-l);
     height: 150dvh;
-    position: relative;
+
+    h2 {
+        animation: --scroll-text linear;
+        animation-timeline: view();
+        animation-range-start: -10dvh;
+        animation-range-end: 80vh;
+
+        @media (width > 1200px) {
+            
+            animation-range-start: 0dvh;
+            animation-range-end: 90vh;
+        }
+    }
 
     article {
         background-color: var(--color-card-background);
@@ -45,12 +51,9 @@ section.project-highlight {
 
         height: max-content;
 
-        position: sticky;
-        bottom: var(--spacing-l);
-
         animation: --scroll linear;
         animation-timeline: view();
-        animation-range-start: 0;
+        animation-range-start: -10dvh;
         animation-range-end: 70vh;
 
         @media (width > 788px) {
@@ -59,14 +62,14 @@ section.project-highlight {
 
         @media (width > 1200px) {
 
-            height: 90vh;
+            height: 80vh;
             overflow: hidden;
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
 
             animation-range-start: 0;
-        animation-range-end: 90vh;
+            animation-range-end: 80vh;
         }
 
         a {
@@ -94,6 +97,17 @@ section.project-highlight {
                 grid-column: span 3;
             }
         }
+
+        p {
+            @media (width > 1200px) {
+            margin-block: 0;
+        }
+        }
+        
+    }
+
+    p {
+        margin-block: var(--spacing-m);
     }
 }
 
@@ -126,5 +140,24 @@ section.project-highlight {
 
     100% {
         scale: 1;
+    }
+}
+
+@keyframes --scroll-text {
+    0% {
+        transform: translateY(50vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes --scroll-text-smaller {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
     }
 }

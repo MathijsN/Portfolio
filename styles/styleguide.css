@@ -18,9 +18,8 @@
     --color-button-bg: #FCE1C3;
     --color-card-background: #fff;
 
-    --text-size-display: 11rem;
-    --text-size-xl: 5rem;
-    --text-size-l: 4rem;
+    --text-size-display: clamp(4rem, 22vw, 11rem);
+    --text-size-xl: 4rem;
     --text-size-m: 2rem;
     --text-size-s: 1rem;
 
@@ -45,6 +44,28 @@ body {
 
     font-size: var(--text-size-s);
 
+    h1,h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        margin-block: var(--spacing-xl) var(--spacing-s);
+        font-size: var(--text-size-m);
+    }
+
+    h3 {
+    }
+
+    p {
+        max-width: 28rem;
+        line-height: 1.4;
+
+        span {
+            color: var(--color-primary);
+        }
+    }
+
 }
 
 main {
@@ -67,6 +88,7 @@ a {
     color: var(--color-text);
     background-color: var(--color-button-bg);
     text-transform: uppercase;
+    height: max-content;
 
     display: flex;
     justify-content: space-between;
