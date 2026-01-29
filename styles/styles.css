@@ -125,14 +125,13 @@ section.project-highlight {
 
 
 section.more-projects {
-    height: 100dvh;
 
     display: flex;
     overflow-x: auto;
 
     &:hover {
         ul {
-            animation-play-state: paused;
+            animation-play-state: running;
         }
     }
 
@@ -141,9 +140,9 @@ section.more-projects {
         gap: var(--spacing-m);
 
         animation: --logo-movement 10s infinite linear;
-        animation-play-state: running;
+        animation-play-state: paused;
 
-        padding-right: var(--spacing-xs);
+        padding-right: var(--spacing-s);
 
 
         li {
@@ -153,7 +152,8 @@ section.more-projects {
             &:hover {
                 img {
 
-                    scale: 2;
+                    scale: 1.1;
+                    cursor: pointer;
                 }
             }
 
