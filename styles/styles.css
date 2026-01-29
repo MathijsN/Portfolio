@@ -51,9 +51,9 @@ section.project-highlight {
         animation: --scroll linear;
         animation-timeline: view();
         animation-range-start: 0;
-        animation-range-end: 90vh;
+        animation-range-end: 70vh;
 
-        @media (width > 30rem) {
+        @media (width > 788px) {
             padding: var(--spacing-xs);
         }
 
@@ -64,6 +64,9 @@ section.project-highlight {
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
+            animation-range-start: 0;
+        animation-range-end: 90vh;
         }
 
         a {
