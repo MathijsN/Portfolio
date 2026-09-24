@@ -2,7 +2,7 @@
     let { content, href, classes } = $props();
 </script>
 
-<a {href} class="project-link {classes}"
+<a {href} class="project-link {classes}" target="_blank"
     >{content}
     <svg
         width="20"

@@ -21,7 +21,11 @@
         <img src={image1} alt="screenshot of the snappthis app" />
     </picture>
 
-    <ProjectLink content="Bekijk dit project" href="#" classes="this-project" />
+    <ProjectLink
+        content="Bekijk dit project"
+        href="https://github.com/MathijsN/pleasurable-ui"
+        classes="this-project"
+    />
 </article>
 
 <style>

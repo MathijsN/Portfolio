@@ -12,7 +12,11 @@
     <HeroInfo />
     <AboutText />
     <ProjectCard />
-    <ProjectLink content="Zie alle projecten" href="#" classes="all-projects" />
+    <ProjectLink
+        content="Zie alle projecten"
+        href="https://github.com/MathijsN?tab=repositories"
+        classes="all-projects"
+    />
     <SocialLinks />
 </main>
 
