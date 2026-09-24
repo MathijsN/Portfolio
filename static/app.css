@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: EduCursive;
-    src: url(../src/lib/assets/EduNSWACTCursive-VariableFont_wght.ttf);
+    src: url(/src/lib/assets/EduNSWACTCursive-VariableFont_wght.ttf);
 }
 
 :root {
