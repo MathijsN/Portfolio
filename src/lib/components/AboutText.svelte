@@ -1,7 +1,7 @@
 <script></script>
 
 <p>
-    A <span>creative</span> front-end developer conscious of accessability, performance,
+    A <span>creative</span> front-end developer conscious of accessibility, performance,
     responsiveness and progressive enhancement.
 </p>
 
