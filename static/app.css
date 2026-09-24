@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: EduCursive;
-    src: url(/src/lib/assets/EduNSWACTCursive-VariableFont_wght.ttf);
+    src: url(/fonts/EduNSWACTCursive-VariableFont_wght.ttf);
 }
 
 :root {
@@ -20,7 +20,7 @@ main {
         height: 100vh;
         grid-template-rows: repeat(25, 1fr);
         grid-template-columns: repeat(6, 1fr);
-        font-family: EduCursive, 'Times New Roman', Times, serif;
+        font-family: EduCursive, cursive, 'Times New Roman', Times, serif;
         padding-inline: 1rem;
     }
 }
